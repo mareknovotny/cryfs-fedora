@@ -1,7 +1,7 @@
 #
 # Spec file for package cryfs
 #
-
+%define _prefix  /usr/local
 Name:           cryfs
 Version:        0.9.7
 Release:        1%{?dist}
@@ -9,15 +9,16 @@ Summary:        cryfs encryption
 License:        GPL-2.0+
 Group:          Security
 Source:         %{name}-%{version}-src.tar.gz
+#Source:         https://github.com/cryfs/cryfs/releases/download/%{version}/cryfs-%{version}.tar.gz
 URL:            https://github.com/cryfs/cryfs
 #=================================
 BuildRequires: cmake
-BuildRequires: %{_lib}boost-devel
-BuildRequires: %{_lib}boost-static-devel
-BuildRequires: %{_lib}cryptopp6-devel
-BuildRequires: %{_lib}curl-devel
-BuildRequires: %{_lib}fuse-devel
-BuildRequires: %{_lib}openssl-devel
+BuildRequires: boost-devel
+BuildRequires: boost-static
+BuildRequires: cryptopp-devel
+BuildRequires: curl-devel
+BuildRequires: fuse-devel
+BuildRequires: openssl-devel
 #=================================
 
 %description
@@ -33,11 +34,11 @@ iCloud, OneDrive and others.
 mkdir cmake-build
 cd cmake-build
 cmake ..
-%make
+%{__make}
 cd ..
 
 %install
-rm -rf %buildroot
+rm -rf %{buildroot}
 %make_install -C cmake-build
 
 %clean
