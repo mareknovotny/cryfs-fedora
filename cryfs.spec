@@ -3,13 +3,13 @@
 #
 %define _prefix  /usr/local
 Name:           cryfs
-Version:        0.9.7
+Version:        0.9.9
 Release:        1%{?dist}
 Summary:        cryfs encryption
 License:        GPL-2.0+
 Group:          Security
 Source:         %{name}-%{version}-src.tar.gz
-#Source:         https://github.com/cryfs/cryfs/releases/download/%{version}/cryfs-%{version}.tar.gz
+##Source:         https://github.com/cryfs/cryfs/releases/download/%{version}/cryfs-%{version}.tar.gz
 URL:            https://github.com/cryfs/cryfs
 #=================================
 BuildRequires: cmake
@@ -49,6 +49,9 @@ rm -rf %{buildroot}
 %{_bindir}/cryfs*
 
 %changelog
+* Thu Feb 15 2018 mnovotny 0.9.9-0.1
+- update to 0.9.9
+
 * Fri Sep 08 2017 mnovotny 0.9.7-0.1
 - update to 0.9.7
 
