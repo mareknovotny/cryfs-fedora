@@ -31,15 +31,15 @@ iCloud, OneDrive and others.
 %setup -q
 
 %build
-mkdir cmake-build
-cd cmake-build
+cd %{name}-%{version}
+mkdir cmake && cd cmake
 cmake ..
 %{__make}
 cd ..
 
 %install
 rm -rf %{buildroot}
-%make_install -C cmake-build
+%make_install -C cmake
 
 %clean
 rm -rf %{buildroot}
