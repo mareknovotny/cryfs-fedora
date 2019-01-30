@@ -3,7 +3,7 @@
 #
 %define _prefix  /usr/local
 Name:           cryfs
-Version:        0.9.9
+Version:        0.9.10
 Release:        2%{?dist}
 Summary:        cryfs encryption
 License:        GPL-2.0+
@@ -50,6 +50,9 @@ rm -rf %{buildroot}
 %{_mandir}/man1/cryfs.1.gz
 
 %changelog
+* Wed Jan 30 2019 mnovotny 0.9.10-0.1
+- update to 0.9.10
+
 * Tue Nov 6 2018 mnovotny 0.9.9-0.2
 - rebuild for Fedora 29
 
@@ -59,6 +62,6 @@ rm -rf %{buildroot}
 * Fri Sep 08 2017 mnovotny 0.9.7-0.1
 - update to 0.9.7
 
-* Sun Jul 03 2016 bb <bb> 0.9.5-0.5442662pclos2016
+* Sun Jul 03 2016 mnovotny 0.9.5-0.1
 - create
 
