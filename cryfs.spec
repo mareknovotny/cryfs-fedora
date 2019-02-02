@@ -13,6 +13,8 @@ Source:         %{name}-%{version}-src.tar.gz
 URL:            https://github.com/cryfs/cryfs
 #=================================
 BuildRequires: cmake
+BuildRequires: gcc-c++
+BuildRequires: python
 BuildRequires: boost-devel
 BuildRequires: boost-static
 BuildRequires: cryptopp-devel
