@@ -9,7 +9,7 @@ Summary:        cryfs encryption
 License:        GPL-2.0+
 Group:          Security
 Source:         %{name}-%{version}-src.tar.gz
-# Source:         https://github.com/cryfs/cryfs/releases/download/%{version}/cryfs-%{version}.tar.gz
+## get real source for the git Source0:         https://github.com/cryfs/cryfs/releases/download/%{version}/cryfs-%{version}.tar.gz
 URL:            https://github.com/cryfs/cryfs
 #=================================
 BuildRequires: cmake
