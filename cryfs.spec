@@ -3,7 +3,7 @@
 #
 %define _prefix  /usr/local
 Name:           cryfs
-Version:        0.10.0
+Version:        0.10.1
 Release:        1%{?dist}
 Summary:        cryfs encryption
 License:        GPL-2.0+
@@ -52,6 +52,9 @@ rm -rf %{buildroot}
 %{_mandir}/man1/cryfs.1.gz
 
 %changelog
+* Wed Apr 10 2019 mnovotny 0.10.1-1
+- update to 0.10.1
+
 * Tue Feb 12 2019 mnovotny 0.10.0-1
 - update to 0.10.0
 
